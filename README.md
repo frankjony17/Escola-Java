@@ -18,4 +18,6 @@ SpringBoot, Angular 1.4
 "gulp": "^3.9.1",
 "gulp-concat": "^2.6.1"
 
+liquibase
+
 Project Spring, Angular JS.
