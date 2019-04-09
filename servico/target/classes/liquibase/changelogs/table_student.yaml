@@ -1,0 +1,52 @@
+
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: frankjony
+      changes:
+        - createTable:
+            tableName: student
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: nota
+                  type: float
+              - column:
+                  name: list_number
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: person_id
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: group_id
+                  type: int
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 4
+      author: frankjony
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: person_id
+            baseTableName: student
+            constraintName: fk_person
+            referencedColumnNames: id
+            referencedTableName: person
+
+        - addForeignKeyConstraint:
+            baseColumnNames: group_id
+            baseTableName: student
+            constraintName: fk_group
+            referencedColumnNames: id
+            referencedTableName: group

@@ -1,0 +1,17 @@
+
+databaseChangeLog:
+
+  - include:
+      file: liquibase/changelogs/table_person.yaml
+
+  - include:
+      file: liquibase/changelogs/table_group.yaml
+
+  - include:
+      file: liquibase/changelogs/table_student.yaml
+
+  - include:
+      file: liquibase/changelogs/table_teacher.yaml
+
+  - include:
+      file: liquibase/changelogs/table_student_teacher.yaml

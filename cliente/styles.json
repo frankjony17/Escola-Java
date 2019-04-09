@@ -1,0 +1,7 @@
+[
+  "./bower_components/angular-material/angular-material.css",
+  "./bower_components/angular-material-icons/angular-material-icons.css",
+  "./bower_components/angular-material-data-table/dist/md-data-table.css",
+  "./bower_components/angular-bootstrap/ui-bootstrap-csp.css",
+  "./src/css/**/*.css"
+]

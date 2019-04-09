@@ -1,0 +1,48 @@
+
+databaseChangeLog:
+  - changeSet:
+      id: 5
+      author: frankjony
+      changes:
+        - createTable:
+            tableName: teacher
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: specialty
+                  type: varchar(45)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: experience
+                  type: varchar(35)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: data_entry
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: person_id
+                  type: int
+                  constraints:
+                    unique: true
+                    nullable: false
+
+  - changeSet:
+      id: 6
+      author: frankjony
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: person_id
+            baseTableName: teacher
+            constraintName: fk_person
+            referencedColumnNames: id
+            referencedTableName: person

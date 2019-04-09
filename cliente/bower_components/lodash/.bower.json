@@ -1,0 +1,24 @@
+{
+  "name": "lodash",
+  "main": "lodash.js",
+  "ignore": [
+    ".*",
+    "*.custom.*",
+    "*.log",
+    "*.map",
+    "*.md",
+    "lodash.src.js",
+    "component.json",
+    "package.json",
+    "doc",
+    "node_modules",
+    "perf",
+    "test",
+    "vendor"
+  ],
+  "_source": "nexus+http://element.basis.com.br/repository/basis-bower-group/lodash",
+  "_target": "^v3.10.1",
+  "_release": "3.10.1",
+  "version": "3.10.1",
+  "_originalSource": "lodash"
+}

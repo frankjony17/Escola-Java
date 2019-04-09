@@ -1,0 +1,21 @@
+{
+  "name": "angular-material",
+  "version": "v1.1.1",
+  "license": "MIT",
+  "ignore": [],
+  "dependencies": {
+    "angular": "^1.4.8",
+    "angular-animate": "^1.4.8",
+    "angular-aria": "^1.4.8",
+    "angular-messages": "^1.4.8"
+  },
+  "main": [
+    "angular-material.js",
+    "angular-material.css"
+  ],
+  "_source": "nexus+http://element.basis.com.br/repository/basis-bower-group/angular-material",
+  "_target": "^v1.1.1",
+  "_release": "v1.1.1",
+  "_originalSource": "angular-material",
+  "_direct": true
+}

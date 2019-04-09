@@ -1,0 +1,14 @@
+com/example/test/repository/GroupRepository.class
+com/example/test/model/Teacher.class
+com/example/test/controller/PersonController.class
+com/example/test/repository/PersonRepository.class
+com/example/test/model/Group.class
+com/example/test/model/dto/PersonDTO.class
+com/example/test/util/Useful.class
+com/example/test/TestApplication.class
+com/example/test/model/Person.class
+com/example/test/TestApplication$1.class
+com/example/test/service/PersonService.class
+com/example/test/controller/GroupController.class
+com/example/test/model/Student.class
+com/example/test/exception/ObjectMapperException.class

@@ -1,0 +1,14 @@
+{
+  "name": "angular-sanitize",
+  "version": "v1.5.11",
+  "license": "MIT",
+  "main": "./angular-sanitize.js",
+  "ignore": [],
+  "dependencies": {
+    "angular": "1.5.11"
+  },
+  "_source": "nexus+http://element.basis.com.br/repository/basis-bower-group/angular-sanitize",
+  "_target": "^v1.5.11",
+  "_release": "v1.5.11",
+  "_originalSource": "angular-sanitize"
+}

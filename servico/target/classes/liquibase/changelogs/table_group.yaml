@@ -1,0 +1,26 @@
+
+databaseChangeLog:
+    - changeSet:
+        id: 2
+        author: frankjony
+        changes:
+          - createTable:
+              tableName: group
+              columns:
+                - column:
+                    name: id
+                    type: int
+                    autoIncrement: true
+                    constraints:
+                      primaryKey: true
+                      nullable: false
+                - column:
+                    name: nome
+                    type: varchar(20)
+                    constraints:
+                      nullable: false
+                - column:
+                    name: location
+                    type: varchar(45)
+                    constraints:
+                      nullable: false

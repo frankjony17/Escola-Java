@@ -1,0 +1,13 @@
+/home/frankjony/Projetos/java/springMVC/servico/src/main/java/com/example/test/model/Student.java
+/home/frankjony/Projetos/java/springMVC/servico/src/main/java/com/example/test/repository/GroupRepository.java
+/home/frankjony/Projetos/java/springMVC/servico/src/main/java/com/example/test/TestApplication.java
+/home/frankjony/Projetos/java/springMVC/servico/src/main/java/com/example/test/service/PersonService.java
+/home/frankjony/Projetos/java/springMVC/servico/src/main/java/com/example/test/model/dto/PersonDTO.java
+/home/frankjony/Projetos/java/springMVC/servico/src/main/java/com/example/test/model/Person.java
+/home/frankjony/Projetos/java/springMVC/servico/src/main/java/com/example/test/model/Teacher.java
+/home/frankjony/Projetos/java/springMVC/servico/src/main/java/com/example/test/repository/PersonRepository.java
+/home/frankjony/Projetos/java/springMVC/servico/src/main/java/com/example/test/util/Useful.java
+/home/frankjony/Projetos/java/springMVC/servico/src/main/java/com/example/test/model/Group.java
+/home/frankjony/Projetos/java/springMVC/servico/src/main/java/com/example/test/controller/GroupController.java
+/home/frankjony/Projetos/java/springMVC/servico/src/main/java/com/example/test/exception/ObjectMapperException.java
+/home/frankjony/Projetos/java/springMVC/servico/src/main/java/com/example/test/controller/PersonController.java

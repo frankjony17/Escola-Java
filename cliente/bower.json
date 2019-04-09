@@ -1,0 +1,31 @@
+{
+  "name": "angular-start-app",
+  "description": "First Project Angular JS",
+  "main": "index.js",
+  "authors": [
+    "frankjony17"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^v1.4.8",
+    "angular-material": "^v1.1.1",
+    "angular-animate": "^v1.5.11",
+    "angular-aria": "^v1.4.8",
+    "angular-material-icons": "^v0.6.0",
+    "angular-messages": "^v1.4.8",
+    "angular-sanitize": "^v1.5.11",
+    "angular-ui-router": "^v0.2.15",
+    "lodash": "^v3.10.1",
+    "angular-material-data-table": "^v0.10.10",
+    "angular-bootstrap": "^v1.3.3",
+    "angular-ui-bootstrap": "^2.5.6"
+  }
+}

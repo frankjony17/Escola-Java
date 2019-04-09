@@ -1,0 +1,41 @@
+{
+  "name": "angular-material-icons",
+  "version": "v0.6.0",
+  "authors": [
+    "Urmil Parikh <urmil@klarsys.com>"
+  ],
+  "description": "AngularJS directive to use Material Design icons with custom fill color and size.",
+  "main": [
+    "angular-material-icons.min.js",
+    "angular-material-icons.css"
+  ],
+  "keywords": [
+    "angular",
+    "material",
+    "design",
+    "icon",
+    "fill",
+    "size",
+    "color",
+    "white",
+    "morph",
+    "svg",
+    "custom"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/klarsys/angular-material-icons",
+  "dependencies": {
+    "angular": ">1.3.x"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_source": "nexus+http://element.basis.com.br/repository/basis-bower-group/angular-material-icons",
+  "_target": "^v0.6.0",
+  "_release": "v0.6.0",
+  "_originalSource": "angular-material-icons"
+}

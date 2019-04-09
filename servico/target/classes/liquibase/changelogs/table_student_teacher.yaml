@@ -1,0 +1,38 @@
+
+databaseChangeLog:
+  - changeSet:
+      id: 7
+      author: frankjony
+      changes:
+        - createTable:
+            tableName: student_teacher
+            columns:
+              - column:
+                  name: student_id
+                  type: int
+              - column:
+                  name: teacher_id
+                  type: int
+
+  - changeSet:
+      id: 8
+      author: frankjony
+      changes:
+        - addPrimaryKey:
+            columnNames: student_id, teacher_id
+            constraintName: pk_student_teacher
+            tableName: student_teacher
+
+        - addForeignKeyConstraint:
+            baseColumnNames: student_id
+            baseTableName: student_teacher
+            constraintName: fk_student
+            referencedColumnNames: id
+            referencedTableName: student
+
+        - addForeignKeyConstraint:
+            baseColumnNames: teacher_id
+            baseTableName: student_teacher
+            constraintName: fk_teacher
+            referencedColumnNames: id
+            referencedTableName: teacher

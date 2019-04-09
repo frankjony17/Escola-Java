@@ -1,0 +1,107 @@
+<md-content layout-padding>
+    <md-card md-theme-watch style="border-top: 1px solid rgba(0, 0, 0, 0.12); margin-top: 0">
+        <md-toolbar style="font-size: 14px; background-color: #33b5e5; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">
+            <h2 class="md-toolbar-tools">
+                <span>Gerenciar Professor</span>
+            </h2>
+        </md-toolbar>
+    </md-card>
+    <!--Table List professors-->
+    <md-card md-theme-watch style="border-top: 1px solid rgba(0, 0, 0, 0.12); margin-top: 0">
+        <table md-table >
+            <thead md-head>
+            <tr md-row>
+                <th md-column style="width: 16.1%">Nome</th>
+                <th md-column style="width: 16%">Sobrenome</th>
+                <th md-column style="width: 29.9%">Especialidade</th>
+                <th md-column style="width: 15.9%">Experiencia</th>
+                <th md-column style="width: 14.9%">Data/entrada</th>
+                <th md-column style="width: 14%">Ação</th>
+            </tr>
+            </thead>
+        </table>
+        <uib-accordion close-others="oneAtATime">
+            <table md-table>
+                <tbody md-body>
+                <tr style="height: 10px" ng-repeat="professor in professorCtrl.professorList">
+                    <td>
+                        <uib-accordion-group>
+                            <uib-accordion-heading>
+                                <table md-table>
+                                    <tbody md-body>
+                                    <tr md-row style="height: 12px">
+                                        <td md-cell style="width: 16%">
+                                            {{professor.person.firstName}}
+                                        </td>
+                                        <td md-cell style="width: 16%">
+                                            {{professor.person.lastName}}
+                                        </td>
+                                        <td md-cell style="width: 30%">
+                                            {{professor.specialty}}
+                                        </td>
+                                        <td md-cell style="width: 16%">
+                                            {{professor.experience}}
+                                        </td>
+                                        <td md-cell style="width: 15%">
+                                            {{professor.dataEntry}}
+                                        </td>
+                                        <td md-cell style="width: 14%">
+                                            <md-button class="md-icon-button md-small" ng-click="personCtrl.loadForm(pessoa)">
+                                                <md-tooltip class="custom-tooltip">Editar pessoa</md-tooltip>
+                                                <ng-md-icon icon="mode_edit" size="20" style="fill: green"></ng-md-icon>
+                                            </md-button>
+                                            <md-button class="md-icon-button md-small" ng-click="personCtrl.confirmRemove($event, pessoa.id)">
+                                                <md-tooltip class="custom-tooltip">Remover pessoa</md-tooltip>
+                                                <ng-md-icon icon="delete" size="20" style="fill: red"></ng-md-icon>
+                                            </md-button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </uib-accordion-heading>
+                                <div style="padding: 15px;">
+                                    <p>Alunos associados ao professor:</p>
+                                    <table md-table>
+                                        <thead md-head>
+                                        <tr md-row style="height: 32px;">
+                                            <th md-column>Nome</th>
+                                            <th md-column>Sobrenome</th>
+                                            <th md-column>Nota</th>
+                                            <th md-column>Grupo</th>
+                                            <th md-column>localização</th>
+                                            <th md-column>Ação</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody md-body ng-repeat="student in professor.students">
+                                        <tr md-row style="height: 14px;">
+                                            <td md-cell>{{student.personFirstName}}</td>
+                                            <td md-cell>{{student.personLastName}}</td>
+                                            <td md-cell>{{student.nota}}</td>
+                                            <td md-cell>{{student.groupNome}}</td>
+                                            <td md-cell>{{student.groupLocation}}</td>
+                                            <td md-cell>
+                                                <md-button class="md-icon-button md-small" ng-click="">
+                                                    <md-tooltip class="custom-tooltip">Alterar nota</md-tooltip>
+                                                    <ng-md-icon icon="plus_one"></ng-md-icon>
+                                                </md-button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </uib-accordion-group>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </uib-accordion>
+        <md-table-pagination style="margin: 0; background-color: #33b5e5; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"
+             md-on-paginate="professorCtrl.list"
+             md-limit="professorCtrl.table.limit"
+             md-limit-options="professorCtrl.table.limitsPage"
+             md-page="professorCtrl.table.page"
+             md-total="{{professorCtrl.totalElements}}"
+             md-page-select>
+        </md-table-pagination>
+    </md-card>
+</md-content>

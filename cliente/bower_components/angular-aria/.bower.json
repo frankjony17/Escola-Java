@@ -1,0 +1,13 @@
+{
+  "name": "angular-aria",
+  "version": "v1.4.8",
+  "main": "./angular-aria.js",
+  "ignore": [],
+  "dependencies": {
+    "angular": "1.4.8"
+  },
+  "_source": "nexus+http://element.basis.com.br/repository/basis-bower-group/angular-aria",
+  "_target": "^1.4.8",
+  "_release": "v1.4.8",
+  "_originalSource": "angular-aria"
+}

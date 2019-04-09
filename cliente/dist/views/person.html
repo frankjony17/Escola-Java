@@ -1,0 +1,75 @@
+<md-content>
+    <ng-form name="personCtrl.pessoaForm">
+        <md-card md-theme-watch style="border-top: 1px solid rgba(0, 0, 0, 0.12); margin-top: 0">
+            <!--Gerenciar Grupos ToolBar-->
+                <md-toolbar style="font-size: 14px; background-color: #33b5e5; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">
+                    <h2 class="md-toolbar-tools">
+                        <span>Gerenciar pessoa</span>
+                    </h2>
+                </md-toolbar>
+                <!--Form Add Grupo-->
+                <div layout="row" layout-margin="0px">
+                    <md-input-container style="width: 35%">
+                        <label>Nome</label>
+                        <input name="firstName" ng-model="personCtrl.model.firstName" required/>
+                    </md-input-container>
+
+                    <md-input-container style="width: 65%">
+                        <label>Sobrenomes</label>
+                        <input name="lastName" ng-model="personCtrl.model.lastName" required/>
+                    </md-input-container>
+                </div>
+
+                <div layout="row"  layout-align="end right">
+                    <md-button class="md-raised" ng-click="personCtrl.limpar()">
+                        <ng-md-icon icon="clear" size="20"></ng-md-icon>
+                        Limpar
+                    </md-button>
+                    <md-button class="md-raised" ng-click="personCtrl.isValid()">
+                        <ng-md-icon icon="done" size="20"></ng-md-icon>
+                        Salvar
+                    </md-button>
+                </div>
+        </md-card>
+    </ng-form>
+    <!--Table List Pessoa-->
+    <md-card md-theme-watch style="border-top: 1px solid rgba(0, 0, 0, 0.12); margin-top: 0">
+            <table md-table>
+                <thead md-head>
+                <tr md-row exibir-cor-elemento-consulta>
+                    <th md-column>First Name</th>
+                    <th md-column>Last Name</th>
+                    <th md-column>Ação</th>
+                </tr>
+                </thead>
+                <tbody md-body>
+                <tr md-row ng-repeat="pessoa in personCtrl.pessoaList">
+                    <td md-cell>
+                        {{pessoa.firstName}}
+                    </td>
+                    <td md-cell>
+                        {{pessoa.lastName}}
+                    </td>
+                    <td md-cell>
+                        <md-button class="md-fab md-mini md-primary" style="background-color: #228b22" ng-click="personCtrl.loadForm(pessoa)">
+                            <md-tooltip class="custom-tooltip">Editar pessoa</md-tooltip>
+                            <ng-md-icon icon="mode_edit" style="fill: white"></ng-md-icon>
+                        </md-button>
+                        <md-button class="md-fab md-mini" ng-click="personCtrl.confirmRemove($event, pessoa.id)">
+                            <md-tooltip class="custom-tooltip">Remover pessoa</md-tooltip>
+                            <ng-md-icon icon="delete"></ng-md-icon>
+                        </md-button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <md-table-pagination style="margin: 0; background-color: #33b5e5; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"
+                 md-on-paginate="personCtrl.list"
+                 md-limit="personCtrl.table.limit"
+                 md-limit-options="personCtrl.table.limitsPage"
+                 md-page="personCtrl.table.page"
+                 md-total="{{personCtrl.totalElements}}"
+                 md-page-select>
+            </md-table-pagination>
+        </md-card>
+</md-content>

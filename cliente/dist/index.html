@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularStartApp">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+        <title>First Project Angular JS</title>
+        <link href="./css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <md-content>
+            <div class="header">
+                <h1>Test Angular JS, Gulp, Node.Js, Spring Boot, etc...</h1>
+            </div>
+                <div class="row">
+                    <div class="col-1 col-s-3 menu">
+                        <ul>
+                            <li><a href="/#/listPerson">Pessoa</a></li>
+                            <li><a href="/#/listGrupo">Grupo</a></li>
+                            <li><a href="/#/listProfessor">Professor</a></li>
+                            <br>
+                            <li><a href="/#/">Back</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-11 col-s-6">
+                        <ui-view></ui-view>
+                    </div>
+                </div>
+        </md-content>
+    </body>
+    <script src="./js/scripts.js"></script>
+</html>
